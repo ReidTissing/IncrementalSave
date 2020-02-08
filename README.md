@@ -17,3 +17,4 @@ Currently only supported on Windows (I believe). Tested in Blender 2.8+. Sometim
 ## Contributing
 
 Pull requests are welcome. This is my first add-on, so have at it.
+Visit my website www.buriedanimal.com
