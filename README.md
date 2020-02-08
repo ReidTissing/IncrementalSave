@@ -1,5 +1,5 @@
 # IncrementalSave
-A python add-on for auto-incremental saving of projects (like in Cinema4D and other software).
+A Blender add-on for auto-incremental saving of projects (like in Cinema4D and other software) created in Python 3.6.
 
 
 ## Installation
@@ -15,4 +15,5 @@ Press F3 while in the 3D viewport, type 'increme..' until you see "Incremental S
 Currently only supported on Windows (I believe). Tested in Blender 2.8+. Sometimes there is a file-system error that shows multiple leading backslashes in Blender's header bar, but doesn't affect functionality.
 
 ## Contributing
-Pull requests are welcome.
+
+Pull requests are welcome. This is my first add-on, so have at it.
