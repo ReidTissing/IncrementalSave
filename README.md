@@ -4,7 +4,7 @@ A Blender add-on for auto-incremental saving of projects (like in Cinema4D and o
 
 ## Installation
 
-Download IncrementalSave.py from this repository to your hard drive. Launch Blender and navigate to: Edit > Preferences > Add-ons > Install Add-on and double-click on IncrementalSave.py.
+Download IncrementalSave.py from this repository to your hard drive. Launch Blender and navigate to: Edit > Preferences > Add-ons > Install Add-on and double-click on IncrementalSave.py. Make sure to click the check-box next to the name to activate it.
 
 ## Usage
 
