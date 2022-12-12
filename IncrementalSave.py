@@ -1,7 +1,7 @@
 """A simple Blender addon that saves a .blend file incrementally. Currently only tested on
  Windows.
 Installation: Go to Edit > Preferences > Add-ons > Install Add-on and double click on this file.
-Usage: Press F3 in the 3D viewport, type 'increme..' until you see "Incremental Save" and press "Enter".
+Usage: Press CTRL+W in the 3D viewport to save.
 Note: You must save the file initially before incrementing.
 created by Reid Tissing (https://github.com/ReidTissing/IncrementalSave or www.buriedanimal.com)
 """
@@ -57,14 +57,25 @@ class IncrementalSave(bpy.types.Operator):
                 bpy.context.window_manager.popup_menu(draw, title = title, icon = icon)
             ShowMessageBox("This is a message", "Error", 'ERROR')
             return {'CANCELLED'}
+addon_keymaps = []
 
 
 def register():
+    wm = bpy.context.window_manager
+    kc = wm.keyconfigs.addon
+    if kc:
+        km = wm.keyconfigs.addon.keymaps.new(name='3D View', space_type='VIEW_3D')
+        kmi = km.keymap_items.new(IncrementalSave.bl_idname, type='W', value='PRESS', ctrl=True)
+        addon_keymaps.append((km, kmi))
     bpy.utils.register_class(IncrementalSave)
 
 
 def unregister():
     bpy.utils.unregister_class(IncrementalSave)
+        # Remove the hotkey
+    for km, kmi in addon_keymaps:
+        km.keymap_items.remove(kmi)
+    addon_keymaps.clear()
     
 if __name__ == "__main__":
     register()
