@@ -1,6 +1,5 @@
 # IncrementalSave
-A Blender add-on for auto-incremental saving of projects (like in Cinema4D and other software) created in Python 3.6.
-
+A Blender add-on for auto-incremental saving of projects similar to Cinema4D.
 
 ## Installation
 
@@ -8,7 +7,7 @@ Download IncrementalSave.py from this repository to your hard drive. Launch Blen
 
 ## Usage
 
-Press F3 while in the 3D viewport, type 'increme..' until you see "Incremental Save" and press "Enter". Note: You must save the file once before you can incrementally save.
+Press CTRL+W.  Note: You must save the file once before you can incrementally save.
 
 ## Issues
 
